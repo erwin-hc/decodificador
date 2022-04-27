@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+
+}
+.container-wrapper {
+	display: grid;
+	min-height: 100vh;
+}
+
+.grid-nav {
+	grid-area: nav;
+}
+
+.grid-article {
+	grid-area: article;
+}
+
+.grid-aside {
+	grid-area: aside;
+}
+
+.grid-footer {
+	grid-area: footer;
+}
+/*MEDIA QUERIES*/
+
+/* CELPHONE */
+@media only screen and (max-width: 480px) {
+  .container-wrapper {
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 2fr 1fr 50px;
+    grid-template-areas:
+    "nav"
+	"article"
+	"aside"
+	"footer";
+	gap: 0.5em;
+  }
+}
+
+/* TABLET */
+@media only screen and (min-width: 481px) and (max-width:768px) {
+  .container-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 50px 2fr 1fr 50px;
+    grid-template-areas:
+    "nav     nav "
+	"article article"
+	"aside   aside"
+	"footer  footer ";
+	gap: 0.5em;
+  }
+}
+
+/* DESKTOP  */
+@media only screen and (min-width: 768px) {
+  .container-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 50px 1fr 1fr 50px;
+    grid-template-areas:
+    "nav     nav     nav"
+	"article article aside"
+	"article article aside"
+	"footer  footer  footer";
+	gap: 0.5em;
+  }
+}
