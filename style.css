@@ -36,10 +36,10 @@ body {
     grid-template-rows: 50px 2fr 1fr 50px;
     grid-template-areas:
     "nav"
-	"article"
-	"aside"
-	"footer";
-	gap: 0.5em;
+		"article"
+		"aside"
+		"footer";
+		grid-gap: 0.5em;
   }
 }
 
@@ -50,10 +50,10 @@ body {
     grid-template-rows: 50px 2fr 1fr 50px;
     grid-template-areas:
     "nav     nav "
-	"article article"
-	"aside   aside"
-	"footer  footer ";
-	gap: 0.5em;
+		"article article"
+		"aside   aside"
+		"footer  footer ";
+		grid-gap: 0.5em;
   }
 }
 
@@ -64,9 +64,9 @@ body {
     grid-template-rows: 50px 1fr 1fr 50px;
     grid-template-areas:
     "nav     nav     nav"
-	"article article aside"
-	"article article aside"
-	"footer  footer  footer";
-	gap: 0.5em;
+		"article article aside"
+		"article article aside"
+		"footer  footer  footer";
+		grid-gap: 0.5em;
   }
 }
