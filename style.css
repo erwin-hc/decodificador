@@ -1,22 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
 :root {
+	--bg-dark: #181818;
 	/*--AZUL--  */
-  --color-AZUL-010: #09346910;
-  --color-AZUL-030: #09346930;
-  --color-AZUL-060: #09346960;
-  --color-AZUL-100: #093469;
+  --color-AZUL: 9,52,105;
+  /*--color-AZUL-100: #093469;*/
   /*--VERMELHO---*/
-  --color-VERMELHO-010: #ef476f10;
-  --color-VERMELHO-060: #ef476f60;
-  --color-VERMELHO-100: #ef476f;
+  --color-VERMELHO: 239,71,111;
   /*--VERDE---*/
-  --color-VERDE-010: #2d6a4f10;
-  --color-VERDE-060: #2d6a4f60;
-  --color-VERDE-100: #2d6a4f;
+  --color-VERDE: 45,106,79;
 
-  --SVG-AZUL: filter: invert(9%) sepia(65%) saturate(3551%) hue-rotate(204deg) brightness(106%) contrast(93%);;
-  --SVG-VERMELHO: filter: invert(48%) sepia(97%) saturate(2545%) hue-rotate(316deg) brightness(91%) contrast(106%);;
-  --SVG-VERDE: filter: invert(33%) sepia(33%) saturate(594%) hue-rotate(101deg) brightness(98%) contrast(94%);;
+  --SVG-AZUL: invert(9%) sepia(65%) saturate(3551%) hue-rotate(204deg) brightness(106%) contrast(93%);
+  --SVG-VERMELHO: invert(48%) sepia(97%) saturate(2545%) hue-rotate(316deg) brightness(91%) contrast(106%);
+  --SVG-VERDE: invert(33%) sepia(33%) saturate(594%) hue-rotate(101deg) brightness(98%) contrast(94%);
 }
 
 body{
@@ -25,22 +20,16 @@ body{
 
 /*---DARK/LIGHT MODE---*/
 /*-----------------------------------------------------------*/
+
 .dark-mode {
-	color:  var(--color-primary);
 	background-color: var(--bg-dark);
 }
-.svg-dark {
-	filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(108deg) brightness(104%) contrast(104%);
-	width: 5em;
+
+.cor-azul {
+	background-color: rgba(var(--color-AZUL),0.1);
+
 }
-/*-----------*/
-.light-mode {
-	color: var(--color-AZUL-100);
-	background-color: var(--color-AZUL-010);
-}
-.svg-light {
-	filter: invert(20%) sepia(18%) saturate(4599%) hue-rotate(187deg) brightness(90%) contrast(100%);
-}
+
 
 /*---CONTAINER---*/
 /*-----------------------------------------------------------*/
@@ -56,15 +45,57 @@ body{
 	grid-area: nav;
 }
 
-.logo {
+#ico-logo {
 	margin: 1em;
 	width: 4em;
 	height: 4em;
+	border-radius: 50%;
+	padding: 0.25em;
+}
+#ico-dark, 
+#ico-light,
+#ico-config {
+	margin: 1em;
+	width: 2em;
+}
+
+
+/*---MODAL CONFIG---*/
+/*-----------------------------------------------------------*/
+.circulo {
+	padding: 0.5em;
+	width: 4em;
+}
+.svg-azul {
+	filter: var(--SVG-AZUL);
+}
+.svg-vermelho {
+	filter: var(--SVG-VERMELHO);
+}
+.svg-verde {
+	filter: var(--SVG-VERDE);
+}
+
+.modal {
+	position: absolute;
+	top: 20px;
+	right: 60px;
+	width: 250px;
+	height: 200px;
+	z-index: 2;
+	border: 3px solid rgba(var(--color-AZUL),1.0);
+	border-radius: 25px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	background-color: rgba(var(--color-AZUL),0.3);
 }
 
 /*---- ANIMACAO DO LOGO, PORQUE NAO? ----------*/
-.logo:hover {
-	animation: girando 1s linear infinite;
+.gira:hover {
+	animation: girando 1.5s linear infinite;
+	box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 @keyframes girando {
 	0% {
@@ -109,15 +140,18 @@ body{
 /*---ASIDE---*/
 /*-----------------------------------------------------------*/
 .grid-aside {
+
 	grid-area: aside;
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-rows: 1fr 70px;
-	background-color: var(--color-AZUL-030);
+	background-color: rgba(var(--color-AZUL),0.3);
 	text-align: center;
 	box-shadow: 0px 24px 32px -8px #00000014;
   border-radius: 10px;
 	margin: 0 2em;
+
+	transition: 0.25s box-shadow;
 }
 .input-aside {
 	grid-row: 1/2;
@@ -129,7 +163,7 @@ body{
 }
 /*--------------------------------------*/
 .aside-imagem-container {
-	color: var(--color-AZUL-100);
+	color: rgba(var(--color-AZUL),1.0);
 	text-align: center;
 }
 .aside-imagem-container  h5 {
@@ -148,7 +182,7 @@ body{
 }
 /*--------------------------------------*/
 .grid-aside:hover {
-	box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 /*--BOTOES---*/
 .div-botoes {
@@ -161,21 +195,27 @@ body{
 	font-family: "Poppins",sans-serif;
 	border-radius: 25px;
 	padding: .75em;
+	transition: 0.25s transform;
+	transition: 0.25s box-shadow;
+}
+.btn:hover {
+	transform: scale(1.1);
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 .btn-1 {
-	background-color: var(--color-AZUL-100);
-	border:  2px solid var(--color-AZUL-100);
+	background-color: rgba(var(--color-AZUL),1.0);
+	border:  2px solid rgba(var(--color-AZUL),1.0);
 	color: #f2f2f2;
 }
 .btn-2 {
-	background-color: var(--color-AZUL-010);
-	border:  2px solid var(--color-AZUL-100);
-	color: var(--color-AZUL-100);
+	background-color: rgba(var(--color-AZUL),0.1);
+	border:  2px solid rgba(var(--color-AZUL),1.0);
+	color: rgba(var(--color-AZUL),1.0);
 }
 .btn-3 {
-	background-color: var(--color-AZUL-010);
-	border:  2px solid var(--color-AZUL-100);
-	color: var(--color-AZUL-100);
+	background-color: rgba(var(--color-AZUL),0.1);
+	border:  2px solid rgba(var(--color-AZUL),1.0);
+	color: rgba(var(--color-AZUL),1.0);
 }
 
 
@@ -254,7 +294,6 @@ body{
 
  /*--------------------------------------*/
 .aside-imagem-container {
-	color: var(--color-AZUL-100);
 	text-align: center;
 }
 .aside-imagem-container  h5 {
