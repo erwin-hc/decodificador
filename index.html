@@ -21,13 +21,13 @@
 
  <!-- LOGO OU TITULO - NAVBAR -->
 <nav class="grid-nav">
-	<h1> <img class="svg-light" src="assets/logo.svg"> </h1>
+	<h1> <img class="svg-light logo" src="assets/logo.svg"> </h1>
 </nav>
 <!-- AREA MENSAGEM A SER CODIFICADA - ARTICLE -->
 <article class="grid-article">
 	<!-- <p> Article </p> -->
 	<div class="input-article">
-		<textarea class="light-mode" id="txt-input" spellcheck="false" placeholder="digite aqui a mensagem a ser codificada ou cole aqui a mensagem a ser decodificada ..."></textarea>
+		<textarea class="light-mode" id="txt-input" spellcheck="false" placeholder="digite aqui a mensagem a ser codificada ou cole aqui a mensagem a ser decodificada ..."> </textarea>
 	</div>
 	<div class="btn btn-1">botao 1</div>
 	<div class="btn btn-2">botao 2</div>
@@ -36,7 +36,12 @@
 <aside class="grid-aside">
 	<!-- <p> Aside </p> -->
 	<div class="input-aside"> 
-		<textarea class="light-mode" id="txt-output" placeholder="teste" spellcheck="false"></textarea> 
+		<div class="aside-imagem-container">
+			<img class="asside-imagem" src="assets/aside.svg">
+			<h5>Nenhuma mensagem <br> encontrada</h5>
+			<p>Digite um texto que você deseja <br> criptografar ou descriptografar.</p>
+		</div>
+		<!-- <textarea  class="light-mode" id="txt-output" spellcheck="false"></textarea>  -->
 	</div>
 	<div class="btn btn-3">botao 3</div>
 </aside>
