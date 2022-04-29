@@ -1,35 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
 :root {
-	--bg-dark: #181818;
-	/*--AZUL--  */
-  --color-AZUL: 9,52,105;
-  /*--color-AZUL-100: #093469;*/
-  /*--VERMELHO---*/
-  --color-VERMELHO: 239,71,111;
-  /*--VERDE---*/
-  --color-VERDE: 45,106,79;
+	--bg-global: 229,229,229;
+  --cor-global: 0,78,152;
 
-  --SVG-AZUL: invert(9%) sepia(65%) saturate(3551%) hue-rotate(204deg) brightness(106%) contrast(93%);
-  --SVG-VERMELHO: invert(48%) sepia(97%) saturate(2545%) hue-rotate(316deg) brightness(91%) contrast(106%);
-  --SVG-VERDE: invert(33%) sepia(33%) saturate(594%) hue-rotate(101deg) brightness(98%) contrast(94%);
+  --SVG-AZUL: invert(22%) sepia(99%) saturate(7500%) hue-rotate(226deg) brightness(108%) contrast(101%);
+  --SVG-VERDE: invert(17%) sepia(60%) saturate(4975%) hue-rotate(85deg) brightness(91%) contrast(102%);
+  --SVG-VERMELHO: invert(27%) sepia(38%) saturate(5723%) hue-rotate(357deg) brightness(91%) contrast(99%);
 }
 
-body{
+body {
 	font-family: 'Poppins',sans-serif;
+	background-color: rgba(var(--bg-global),1.0);
 }
-
-/*---DARK/LIGHT MODE---*/
-/*-----------------------------------------------------------*/
-
-.dark-mode {
-	background-color: var(--bg-dark);
-}
-
-.cor-azul {
-	background-color: rgba(var(--color-AZUL),0.1);
-
-}
-
 
 /*---CONTAINER---*/
 /*-----------------------------------------------------------*/
@@ -83,13 +65,13 @@ body{
 	width: 250px;
 	height: 200px;
 	z-index: 2;
-	border: 3px solid rgba(var(--color-AZUL),1.0);
+	border: 3px solid rgba(var(--cor-global),1.0);
 	border-radius: 25px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: row;
-	background-color: rgba(var(--color-AZUL),0.3);
+	background-color: rgba(var(--cor-global),0.3);
 }
 
 /*---- ANIMACAO DO LOGO, PORQUE NAO? ----------*/
@@ -130,6 +112,8 @@ body{
 	outline: none;
 	text-transform: lowercase;
 	overflow: hidden;
+	color: rgba(var(--cor-global),1.0);
+	font-weight: bold;
 }
 .input-article textarea {
 	font-size: min(4vw, 24px);
@@ -140,12 +124,11 @@ body{
 /*---ASIDE---*/
 /*-----------------------------------------------------------*/
 .grid-aside {
-
 	grid-area: aside;
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-rows: 1fr 70px;
-	background-color: rgba(var(--color-AZUL),0.3);
+	background-color: rgba(var(--cor-global),0.3);
 	text-align: center;
 	box-shadow: 0px 24px 32px -8px #00000014;
   border-radius: 10px;
@@ -163,7 +146,7 @@ body{
 }
 /*--------------------------------------*/
 .aside-imagem-container {
-	color: rgba(var(--color-AZUL),1.0);
+	color: rgba(var(--cor-global),1.0);
 	text-align: center;
 }
 .aside-imagem-container  h5 {
@@ -203,19 +186,19 @@ body{
 	box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 .btn-1 {
-	background-color: rgba(var(--color-AZUL),1.0);
-	border:  2px solid rgba(var(--color-AZUL),1.0);
+	background-color: rgba(var(--cor-global),1.0);
+	border:  2px solid rgba(var(--cor-global),1.0);
 	color: #f2f2f2;
 }
 .btn-2 {
-	background-color: rgba(var(--color-AZUL),0.1);
-	border:  2px solid rgba(var(--color-AZUL),1.0);
-	color: rgba(var(--color-AZUL),1.0);
+	background-color: rgba(var(--cor-global),0.1);
+	border:  2px solid rgba(var(--cor-global),1.0);
+	color: rgba(var(--cor-global),1.0);
 }
 .btn-3 {
-	background-color: rgba(var(--color-AZUL),0.1);
-	border:  2px solid rgba(var(--color-AZUL),1.0);
-	color: rgba(var(--color-AZUL),1.0);
+	background-color: rgba(var(--cor-global),0.1);
+	border:  2px solid rgba(var(--cor-global),1.0);
+	color: rgba(var(--cor-global),1.0);
 }
 
 

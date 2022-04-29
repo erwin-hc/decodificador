@@ -15,22 +15,22 @@
 	<!-- <link rel="stylesheet" type="text/css" href="debuger.css"> -->
 
 </head>
-<body class="light-mode">
+<body id="body">
 <div class="container-wrapper">
 	
 
  <!-- LOGO OU TITULO - NAVBAR -->
 <nav class="grid-nav">
-	<h1> <img id="ico-logo" style="float: left;" class="svg-azul   gira " src="assets/logo.svg"> </h1>
-	<h1> <img id="ico-config" style="float: right;" class="svg-azul " src="assets/config.svg"> </h1>
-	<h1> <img id="ico-dark" style="float: right;" class="svg-azul " src="assets/dark-mode.svg"> </h1>
-	<h1> <img id="ico-light" style="float: right;" class="svg-azul " src="assets/light-mode.svg"> </h1>
+	<h1> <img alt="Logo"  id="ico-logo"   style="float: left;" 	 class="icones_svg svg-azul gira" src="assets/logo.svg"> </h1>
+	<h1> <img alt="Conf"  id="ico-config" style="float: right;"  class="icones_svg svg-azul" src="assets/config.svg"> </h1>
+	<h1> <img alt="Dark"  id="ico-dark"   style="float: right;"  class="icones_svg svg-azul" src="assets/dark-mode.svg"> </h1>
+	<h1> <img alt="Light" id="ico-light"  style="float: right;"  class="icones_svg svg-azul" src="assets/light-mode.svg"> </h1>
 </nav>
 <!-- ---MODAL CONFIG--- -->
-<div class="modal">
-	<h1> <img class="svg-azul circulo" src="assets/circulo.svg"> </h1>
-	<h1> <img class="svg-vermelho circulo" src="assets/circulo.svg"> </h1>
-	<h1> <img class="svg-verde circulo" src="assets/circulo.svg"> </h1>
+<div id="conf-modal" class="modal" style="display: none;">
+	<h1> <img id="cor_azul" alt="Azul" 			class="svg-azul circulo" 	 src="assets/circulo.svg"> </h1>
+	<h1> <img id="cor_vermelho" alt="Vermelho"  class="svg-vermelho circulo" src="assets/circulo.svg"> </h1>
+	<h1> <img id="cor_verde" alt="Verde" 		class="svg-verde circulo"	 src="assets/circulo.svg"> </h1>
 </div>
 
 
@@ -38,28 +38,31 @@
 <article class="grid-article">
 	<!-- <p> Article </p> -->
 	<div class="input-article">
-		<textarea class="light-mode" id="txt-input" spellcheck="false" placeholder="digite aqui a mensagem para criptografar ou cole aqui a mensagem para descriptografar ..."> </textarea>
+		<textarea id="txt-input" spellcheck="false" placeholder="digite aqui a mensagem para criptografar ou cole aqui a mensagem para descriptografar ..."> </textarea>
 	</div>
-	<div class="div-botoes div-btn-1"> <button type="button" class="btn btn-1">Criptografar</button> </div>
-	<div class="div-botoes div-btn-2"> <button type="button" class="btn btn-2">Descriptografar</button> </div>
+	<div class="div-botoes div-btn-1"> <button id="btn-cri" type="button" class="btn btn-1">Criptografar</button> </div>
+	<div class="div-botoes div-btn-2"> <button id="btn-des" type="button" class="btn btn-2">Descriptografar</button> </div>
 </article>
 
 <!-- AREA MENSAGEM CODIFICADA - ASIDE -->
 <aside class="grid-aside">
 	<!-- <p> Aside </p> -->
 	<div class="input-aside"> 
-		<div class="aside-imagem-container">
-			<img class="asside-imagem" src="assets/aside.svg">
+		<div id="aside-imagem" class="aside-imagem-container">
+			<img alt="Ilustração" class="asside-imagem" src="assets/aside.svg">
 			<h5>Nenhuma mensagem <br> encontrada</h5>
 			<p>Digite um texto que você deseja <br> criptografar ou descriptografar.</p>
 		</div>
-		<!-- <textarea  class="light-mode" id="txt-output" spellcheck="false"></textarea>  -->
+		<textarea id="txt-output" spellcheck="false"></textarea> 
 	</div>
-	<div class="div-botoes div-btn-3"> <button type="button" class="btn btn-3">Copiar</button> </div>
+	<div class="div-botoes div-btn-3"> <button id="btn-cop" type="button" class="btn btn-3">Copiar</button> </div>
 </aside>
 
 
 
 </div>
+
+
+<script type="text/javascript" src="script.js"></script>
 </body>
 </html>
