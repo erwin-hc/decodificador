@@ -81,7 +81,7 @@ function limpa_texto() {
 
 function toggle_imagem() {
 	 if (outputText.value == "") {
-	 	imagem.style.display = "inline";
+	 	imagem.style.display = "flex";
 	 } else {
 		imagem.style.display = "none";
  	}
@@ -93,3 +93,16 @@ btnCri.addEventListener("click", function tranfere_texto() {
 	toggle_imagem();
 
 });
+
+var textAreas = document.getElementsByTagName('textarea');
+for(var i = 0; i < textAreas.length; i++){
+  var input = textAreas[i];
+  input.addEventListener('focus', function(){
+    var place = this.getAttribute('placeholder');
+    this.setAttribute('placeholder', '');
+    var blur = function(){
+      this.setAttribute('placeholder', place);
+    }
+    this.addEventListener('blur', blur);
+  });
+}
