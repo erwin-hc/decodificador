@@ -18,7 +18,7 @@ body {
 .container-wrapper {
 	display: grid;
 	margin-bottom: 2em;
-	/*min-height: 100vh;*/
+	height: 100%;
 }
 
 /*---NAVBAR---*/
@@ -133,21 +133,27 @@ body {
 	box-shadow: 0px 24px 32px -8px #00000014;
   border-radius: 10px;
 	margin: 0 2em;
-
+	max-width: 450px;
 	transition: 0.25s box-shadow;
+	position: relative;
 }
 .input-aside {
 	grid-row: 1/2;
 	text-align: center;
-
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 }
 /*--------------------------------------*/
 .aside-imagem-container {
+	position: absolute;
+	display: flex;
+	flex-direction: column;
 	color: rgba(var(--cor-global),1.0);
 	text-align: center;
+	top:  25px;
+
+
 }
 .aside-imagem-container  h5 {
 	padding: 0.75em;
@@ -161,7 +167,7 @@ body {
 }
 .asside-imagem {
 	margin:	auto;
-	width: min(35vw, 500px);
+	width: min(33vw, 450px);
 }
 /*--------------------------------------*/
 .grid-aside:hover {
@@ -254,6 +260,12 @@ body {
   	width: 125px;
   	/*margin: 0.5em;*/
   }
+
+  .asside-imagem {
+		margin:	auto;
+		width: 45vw;
+		/*width: min(45vw, 500px);*/
+	}
 }
 
 /* CELPHONE */
@@ -276,18 +288,23 @@ body {
  }
 
  /*--------------------------------------*/
-.aside-imagem-container {
-	text-align: center;
-}
-.aside-imagem-container  h5 {
-	font-size: 1.5em;
-}
-.aside-imagem-container  p {
-	font-size: 1.25em;
-}
-.asside-imagem {
-	width: 100%;
-}
+		.aside-imagem-container {
+			text-align: center;
+		}
+		.aside-imagem-container  h5 {
+			font-size: 1.5em;
+		}
+		.aside-imagem-container  p {
+			font-size: 1.25em;
+		}
+		.asside-imagem {
+			width: 100%;
+		}
+	  .asside-imagem {
+	  	margin-top: 100px;
+		/*width: min(45vw, 500px);*/
+	}
+
 /*--------------------------------------*/
 
   .btn {
