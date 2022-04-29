@@ -82,8 +82,10 @@ function limpa_texto() {
 function toggle_imagem() {
 	 if (outputText.value == "") {
 	 	imagem.style.display = "flex";
+	 	btnCop.style.display = 'none';
 	 } else {
 		imagem.style.display = "none";
+	 	btnCop.style.display = 'block';
  	}
 };
 
@@ -94,15 +96,7 @@ btnCri.addEventListener("click", function tranfere_texto() {
 
 });
 
-var textAreas = document.getElementsByTagName('textarea');
-for(var i = 0; i < textAreas.length; i++){
-  var input = textAreas[i];
-  input.addEventListener('focus', function(){
-    var place = this.getAttribute('placeholder');
-    this.setAttribute('placeholder', '');
-    var blur = function(){
-      this.setAttribute('placeholder', place);
-    }
-    this.addEventListener('blur', blur);
-  });
-}
+
+inputText.addEventListener("onchange", function() {
+	alert("caaa")
+})
