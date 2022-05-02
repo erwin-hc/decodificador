@@ -114,13 +114,9 @@ body {
 	overflow: hidden;
 	color: rgba(var(--cor-global),1.0);
 	font-weight: bold;
+	font-size: 22px;
 }
-.input-article textarea {
-	font-size: min(4vw, 24px);
-}
-.input-aside textarea {
-	font-size: min(1.5vw, 18px);
-}
+
 /*---ASIDE---*/
 /*-----------------------------------------------------------*/
 .grid-aside {
@@ -248,12 +244,9 @@ body {
   .grid-article {
   		margin-left: 10px;
   }
-  .grid-article .input-article textarea {
+  .grid-article .input-article textarea, .grid-aside, .input-aside textarea {
   	margin: 0 10px; 
-
-  }
-  .grid-aside, .input-aside textarea  {
-  	margin: 0 10px;
+  	font-size: 18px;
 
   }
   .btn {
@@ -312,6 +305,7 @@ body {
 /*--------------------------------------*/
 		.input-article textarea, .input-aside textarea {
 				min-height: 400px;
+				font-size: 18px;
 			}
 
 	  .btn {
