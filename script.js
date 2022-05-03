@@ -109,6 +109,9 @@ btnCri.addEventListener("click", function codifica() {
 btnDes.addEventListener("click", function decodifica() {
 	outputText.value  = inputText.value.replaceAll('enter','e').replaceAll('imes','i').replaceAll('ai','a').replaceAll('ober','o').replaceAll('ufat','u');
 	toggle_imagem();
+
+	// ROLA ATE O ULTIMO ELEMENTO DA PAGINA
+	outputText.scrollIntoView();
 });
 
 // FUNCAO COPIA
