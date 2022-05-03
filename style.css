@@ -46,7 +46,8 @@ body {
 /*-----------------------------------------------------------*/
 .circulo {
 	padding: 0.5em;
-	width: 4em;
+	width: 3.5em;
+
 }
 .svg-azul {
 	filter: var(--SVG-AZUL);
@@ -63,15 +64,35 @@ body {
 	top: 20px;
 	right: 60px;
 	width: 250px;
-	height: 200px;
+	height: 250px;
 	z-index: 2;
-	border: 3px solid rgba(var(--cor-global),1.0);
 	border-radius: 25px;
+	background-color: rgba(var(--bg-global),1.0);
+	border: 3px solid rgba(var(--cor-global),1.0);
 	display: flex;
-	justify-content: center;
+
+}
+
+.modal-ln1 {
+	display: flex;
 	align-items: center;
-	flex-direction: row;
-	background-color: rgba(var(--cor-global),0.3);
+	justify-content: center;
+}
+.modal-ln2 {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.modal-ln3 {
+	display: flex;
+	align-items: center;
+	justify-content: center;	
+}
+
+.modal-ln2 p {
+	color: rgba(var(--cor-global),1.0);
+	font-weight: bold;
+	letter-spacing: 3px;
 }
 
 /*---- ANIMACAO DO LOGO, PORQUE NAO? ----------*/

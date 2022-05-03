@@ -14,7 +14,7 @@ var btnCop = document.getElementById('btn-cop');
 // ESCONDE MOSTRA MODAL
 function toggle_modal() {
 	if (modal.style.display === "none") {
-    modal.style.display = "flex";
+    modal.style.display = "grid";
   	} else {
     modal.style.display = "none";
   	}
