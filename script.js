@@ -100,6 +100,9 @@ function toggle_imagem() {
 btnCri.addEventListener("click", function codifica() {
 	outputText.value  = inputText.value.replaceAll('e','enter').replaceAll('i','imes').replaceAll('a','ai').replaceAll('o','ober').replaceAll('u','ufat');
 	toggle_imagem();
+
+	// ROLA ATE O ULTIMO ELEMENTO DA PAGINA
+	outputText.scrollIntoView();
 });
 
 // REPLACE DECODIFICA
@@ -115,6 +118,7 @@ btnCop.addEventListener("click", function copia() {
   navigator.clipboard.writeText(outputText.value);  
   outputText.value = "Copiado!";
   setTimeout(limpaOutput, 1000);
+  inputText.scrollIntoView();
 });
 
 // FUNCAO LIMPA TEXTO DEPOIS DE COPIAR
@@ -134,3 +138,4 @@ function updateValue(e) {
 		toggle_imagem();
 	}
 }
+

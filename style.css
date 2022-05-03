@@ -247,7 +247,13 @@ body {
   .grid-article .input-article textarea, .grid-aside, .input-aside textarea {
   	margin: 0 10px; 
   	font-size: 18px;
-
+  }
+  .aside-imagem-container h5 {
+  	margin: 0 15px;
+  	font-size: 20px;
+  }
+  .aside-imagem-container p {
+  	font-size: 16px;
   }
   .btn {
   	width: 125px;
@@ -284,7 +290,9 @@ body {
 		grid-row: 1 / 2;
 	 }
 
- /*--------------------------------------*/
+    .grid-aside {
+    	margin-top: 50px;
+    }
 		.aside-imagem-container {
 			text-align: center;
 		}
@@ -306,6 +314,10 @@ body {
 		.input-article textarea, .input-aside textarea {
 				min-height: 400px;
 				font-size: 18px;
+			}
+
+			.aside-imagem-container {
+				padding: 0px 15px;
 			}
 
 	  .btn {
