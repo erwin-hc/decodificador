@@ -25,7 +25,7 @@ config.addEventListener("click", toggle_modal);
 var cor_azul = document.getElementById('cor_azul');
 var cor_vermelho = document.getElementById('cor_vermelho');
 var cor_verde = document.getElementById('cor_verde');
-var cores = [[0,78,152],[10,93,0],[230,50,10],[229,229,229],[10,10,10]];
+var cores = [[0,78,152],[10,93,0],[230,50,10],[229,229,229],[30,30,30]];
 
 // MUDA PARA COR AZUL
 cor_azul.addEventListener("click", function() {
